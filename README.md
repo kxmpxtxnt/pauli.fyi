@@ -1,5 +1,3 @@
-<center>
-
 # pauli.fyi
 
 ### This repository contains some projects which I use on my server
@@ -14,8 +12,3 @@ ___
 
 This is a webserver I use made for cooler http response codes.
 ___
-</center>
-
-
-
-I don't care if the 'center' tag is deprecated
