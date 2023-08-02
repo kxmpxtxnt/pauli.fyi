@@ -1,0 +1,328 @@
+{
+  "codes": [
+    {
+      "code": 0,
+      "description": "Response '0' is an default placeholder.",
+      "fileName": "0.gif",
+      "exists": true
+    },
+    {
+      "code": 100,
+      "description": "Continue",
+      "fileName": "100.gif",
+      "exists": true
+    },
+    {
+      "code": 101,
+      "description": "Switching Protocols",
+      "fileName": "101.gif",
+      "exists": false
+    },
+    {
+      "code": 102,
+      "description": "Processing",
+      "fileName": "102.gif",
+      "exists": false
+    },
+    {
+      "code": 200,
+      "description": "OK",
+      "fileName": "200.gif",
+      "exists": false
+    },
+    {
+      "code": 201,
+      "description": "Created",
+      "fileName": "201.gif",
+      "exists": false
+    },
+    {
+      "code": 202,
+      "description": "Accepted",
+      "fileName": "202.gif",
+      "exists": false
+    },
+    {
+      "code": 203,
+      "description": "Non-Authoritative Information",
+      "fileName": "203.gif",
+      "exists": false
+    },
+    {
+      "code": 204,
+      "description": "No Content",
+      "fileName": "204.gif",
+      "exists": false
+    },
+    {
+      "code": 205,
+      "description": "Reset Content",
+      "fileName": "205.gif",
+      "exists": false
+    },
+    {
+      "code": 206,
+      "description": "Partial Content",
+      "fileName": "206.gif",
+      "exists": false
+    },
+    {
+      "code": 207,
+      "description": "Multi-Status",
+      "fileName": "207.gif",
+      "exists": false
+    },
+    {
+      "code": 300,
+      "description": "Multiple Choices",
+      "fileName": "300.gif",
+      "exists": false
+    },
+    {
+      "code": 301,
+      "description": "Moved Permanently",
+      "fileName": "301.gif",
+      "exists": false
+    },
+    {
+      "code": 302,
+      "description": "Found",
+      "fileName": "302.gif",
+      "exists": false
+    },
+    {
+      "code": 303,
+      "description": "See Other",
+      "fileName": "303.gif",
+      "exists": false
+    },
+    {
+      "code": 304,
+      "description": "Not Modified",
+      "fileName": "304.gif",
+      "exists": false
+    },
+    {
+      "code": 305,
+      "description": "Use Proxy",
+      "fileName": "305.gif",
+      "exists": false
+    },
+    {
+      "code": 306,
+      "description": "Switch Proxy",
+      "fileName": "306.gif",
+      "exists": false
+    },
+    {
+      "code": 307,
+      "description": "Temporary Redirect",
+      "fileName": "307.gif",
+      "exists": false
+    },
+    {
+      "code": 308,
+      "description": "Permanent Redirect",
+      "fileName": "308.gif",
+      "exists": false
+    },
+    {
+      "code": 400,
+      "description": "Bad Request",
+      "fileName": "400.gif",
+      "exists": false
+    },
+    {
+      "code": 401,
+      "description": "Unauthorized",
+      "fileName": "401.gif",
+      "exists": false
+    },
+    {
+      "code": 402,
+      "description": "Payment Required",
+      "fileName": "402.gif",
+      "exists": false
+    },
+    {
+      "code": 403,
+      "description": "Forbidden",
+      "fileName": "403.gif",
+      "exists": false
+    },
+    {
+      "code": 404,
+      "description": "Not Found",
+      "fileName": "404.gif",
+      "exists": true
+    },
+    {
+      "code": 405,
+      "description": "Method Not Allowed",
+      "fileName": "405.gif",
+      "exists": false
+    },
+    {
+      "code": 406,
+      "description": "Not Acceptable",
+      "fileName": "406.gif",
+      "exists": false
+    },
+    {
+      "code": 407,
+      "description": "Proxy Authentication Required",
+      "fileName": "407.gif",
+      "exists": false
+    },
+    {
+      "code": 408,
+      "description": "Request Timeout",
+      "fileName": "408.gif",
+      "exists": false
+    },
+    {
+      "code": 409,
+      "description": "Conflict",
+      "fileName": "409.gif",
+      "exists": false
+    },
+    {
+      "code": 410,
+      "description": "Gone",
+      "fileName": "410.gif",
+      "exists": false
+    },
+    {
+      "code": 411,
+      "description": "Length Required",
+      "fileName": "411.gif",
+      "exists": false
+    },
+    {
+      "code": 412,
+      "description": "Precondition Failed",
+      "fileName": "412.gif",
+      "exists": false
+    },
+    {
+      "code": 413,
+      "description": "Payload Too Large",
+      "fileName": "413.gif",
+      "exists": false
+    },
+    {
+      "code": 414,
+      "description": "Request-URI Too Long",
+      "fileName": "414.gif",
+      "exists": false
+    },
+    {
+      "code": 415,
+      "description": "Unsupported Media Type",
+      "fileName": "415.gif",
+      "exists": false
+    },
+    {
+      "code": 416,
+      "description": "Requested Range Not Satisfiable",
+      "fileName": "416.gif",
+      "exists": false
+    },
+    {
+      "code": 417,
+      "description": "Expectation Failed",
+      "fileName": "417.gif",
+      "exists": false
+    },
+    {
+      "code": 422,
+      "description": "Unprocessable Entity",
+      "fileName": "422.gif",
+      "exists": false
+    },
+    {
+      "code": 423,
+      "description": "Locked",
+      "fileName": "423.gif",
+      "exists": false
+    },
+    {
+      "code": 424,
+      "description": "Failed Dependency",
+      "fileName": "424.gif",
+      "exists": false
+    },
+    {
+      "code": 425,
+      "description": "Too Early",
+      "fileName": "425.gif",
+      "exists": false
+    },
+    {
+      "code": 426,
+      "description": "Upgrade Required",
+      "fileName": "426.gif",
+      "exists": false
+    },
+    {
+      "code": 429,
+      "description": "Too Many Requests",
+      "fileName": "429.gif",
+      "exists": false
+    },
+    {
+      "code": 431,
+      "description": "Request Header Fields Too Large",
+      "fileName": "431.gif",
+      "exists": false
+    },
+    {
+      "code": 500,
+      "description": "Internal Server Error",
+      "fileName": "500.gif",
+      "exists": false
+    },
+    {
+      "code": 501,
+      "description": "Not Implemented",
+      "fileName": "501.gif",
+      "exists": false
+    },
+    {
+      "code": 502,
+      "description": "Bad Gateway",
+      "fileName": "502.gif",
+      "exists": false
+    },
+    {
+      "code": 503,
+      "description": "Service Unavailable",
+      "fileName": "503.gif",
+      "exists": false
+    },
+    {
+      "code": 504,
+      "description": "Gateway Timeout",
+      "fileName": "504.gif",
+      "exists": false
+    },
+    {
+      "code": 505,
+      "description": "HTTP Version Not Supported",
+      "fileName": "505.gif",
+      "exists": false
+    },
+    {
+      "code": 506,
+      "description": "Variant Also Negotiates",
+      "fileName": "506.gif",
+      "exists": false
+    },
+    {
+      "code": 507,
+      "description": "Insufficient Storage",
+      "fileName": "507.gif",
+      "exists": false
+    }
+  ]
+}
