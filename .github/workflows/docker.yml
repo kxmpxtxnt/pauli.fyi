@@ -12,7 +12,7 @@ jobs:
   docker-build:
     name: 'Docker response push'
     runs-on: ubuntu-latest
-    permission:
+    permissions:
       packages: write
     steps:
       - name: Checkout
