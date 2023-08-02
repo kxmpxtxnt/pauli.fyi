@@ -13,6 +13,7 @@ dependencyResolutionManagement {
 			plugin("jvm", "org.jetbrains.kotlin.jvm").versionRef("kotlin")
 			plugin("serialization", "org.jetbrains.kotlin.plugin.serialization").versionRef("kotlin")
 			plugin("ktor", "io.ktor.plugin").versionRef("ktor")
+			plugin("shadow", "com.github.johnrengelman.shadow").version("8.1.1")
 
 			version("coroutines", "1.7.3")
 			version("serialization", "1.5.1")
