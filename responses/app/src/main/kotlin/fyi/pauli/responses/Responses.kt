@@ -21,7 +21,6 @@ val SERVER_PORT: Int = System.getenv("SERVER_PORT").toInt()
 val SERVER_HOST: String = System.getenv("SERVER_HOST")
 val DEBUG: Boolean = System.getenv("DEBUG").toBoolean()
 
-@OptIn(ExperimentalSerializationApi::class)
 val responseFilesConfig: () -> ResponseFilesConfig
 	get() = {
 		val bytes = ResponseFilesConfig::class.java.getResourceAsStream("/responses.json")?.readBytes()

@@ -11,10 +11,17 @@ import io.ktor.server.routing.*
 import kotlinx.html.*
 
 fun Routing.serverResponse() = get<ResponseRoute> { route ->
-	val responseFile = responseFilesConfig().codes.find {
-		it.code == route.statusCode && it.exists
+	val code = route.statusCode.toIntOrNull() ?: Int.MIN_VALUE
+
+	if (code == Int.MIN_VALUE) {
+		call.respondRedirect("/404")
+		return@get
 	}
-		?: ResponseFilesConfig.ResponseFile.responseNotFound(route.statusCode)
+
+	val responseFile = responseFilesConfig().codes.find {
+		it.code == code && it.exists
+	}
+		?: ResponseFilesConfig.ResponseFile.responseNotFound(code)
 
 	when (route.data) {
 		"raw" -> call.respond(responseFile.raw())
@@ -45,10 +52,10 @@ fun Routing.serverResponse() = get<ResponseRoute> { route ->
 				body {
 					div {
 						style = "text-align: center;"
-						img("${route.statusCode} - ${responseFile.description}", responseFile.path)
+						img("$code - ${responseFile.description}", responseFile.path)
 						br { }
 						h1 {
-							+"$route.statusCode"
+							+"$code"
 						}
 						h3 {
 							+responseFile.description
