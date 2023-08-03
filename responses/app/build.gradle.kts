@@ -31,11 +31,10 @@ tasks {
 	}
 
 	application {
-		mainClass.set("fyi.pauli.responses.Responses")
+		mainClass.set("fyi.pauli.responses.ResponsesKt")
 	}
 
 	build {
-		dependsOn(application)
-		dependsOn(shadowJar)
+		dependsOn(runShadow)
 	}
 }
