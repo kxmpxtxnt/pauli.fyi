@@ -35,6 +35,7 @@ tasks {
 	}
 
 	build {
+		dependsOn(application)
 		dependsOn(shadowJar)
 	}
 }
