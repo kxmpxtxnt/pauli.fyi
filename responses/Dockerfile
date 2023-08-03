@@ -12,4 +12,4 @@ WORKDIR /app
 
 COPY --from=build /home/gradle/build/libs/responses.pauli.fyi-*-all.jar responses.jar
 
-ENTRYPOINT ["java", "-jar" , "responses.jar ", "test"]
+ENTRYPOINT ["java", "-jar" , "responses.jar "]
