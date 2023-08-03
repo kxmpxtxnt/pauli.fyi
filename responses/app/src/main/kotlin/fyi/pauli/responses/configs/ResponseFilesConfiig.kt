@@ -1,8 +1,6 @@
-package fyi.pauli.errors.configs
+package fyi.pauli.responses.configs
 
-import fyi.pauli.errors.json
-import kotlinx.html.*
-import kotlinx.html.stream.appendHTML
+import fyi.pauli.responses.json
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.encodeToString
 

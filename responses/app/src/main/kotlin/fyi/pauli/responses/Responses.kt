@@ -1,7 +1,7 @@
-package fyi.pauli.errors
+package fyi.pauli.responses
 
-import fyi.pauli.errors.configs.ResponseFilesConfig
-import fyi.pauli.errors.serve.serverResponse
+import fyi.pauli.responses.configs.ResponseFilesConfig
+import fyi.pauli.responses.serve.serverResponse
 import io.ktor.http.*
 import io.ktor.server.application.*
 import io.ktor.server.cio.*
@@ -14,7 +14,6 @@ import io.ktor.server.response.*
 import io.ktor.server.routing.*
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.json.Json
-import kotlinx.serialization.json.decodeFromStream
 import org.slf4j.LoggerFactory
 import org.slf4j.event.Level
 
@@ -25,11 +24,13 @@ val DEBUG: Boolean = System.getenv("DEBUG").toBoolean()
 @OptIn(ExperimentalSerializationApi::class)
 val responseFilesConfig: () -> ResponseFilesConfig
 	get() = {
-		val stream = ResponseFilesConfig::class.java.getResourceAsStream("/responses.json")
+		val bytes = ResponseFilesConfig::class.java.getResourceAsStream("/responses.json")?.readBytes()
 
-		if (stream != null) {
-			json().decodeFromStream<ResponseFilesConfig>(stream)
-		} else ResponseFilesConfig()
+		checkNotNull(bytes) {
+			"Configuration file responses.json should not be empty or existing."
+		}
+
+		json().decodeFromString<ResponseFilesConfig>(String(bytes))
 	}
 
 fun main() {

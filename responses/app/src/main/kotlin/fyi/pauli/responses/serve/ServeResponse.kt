@@ -1,9 +1,8 @@
-package fyi.pauli.errors.serve
+package fyi.pauli.responses.serve
 
-import fyi.pauli.errors.configs.ResponseFilesConfig
-import fyi.pauli.errors.responseFilesConfig
-import fyi.pauli.errors.routes.ResponseRoute
-import io.ktor.http.*
+import fyi.pauli.responses.configs.ResponseFilesConfig
+import fyi.pauli.responses.responseFilesConfig
+import fyi.pauli.responses.routes.ResponseRoute
 import io.ktor.server.application.*
 import io.ktor.server.html.*
 import io.ktor.server.resources.*
@@ -12,18 +11,10 @@ import io.ktor.server.routing.*
 import kotlinx.html.*
 
 fun Routing.serverResponse() = get<ResponseRoute> { route ->
-	val code: Int = route.statusCode.toIntOrNull() ?: Int.MIN_VALUE
-
-	if (code == Int.MIN_VALUE) {
-		call.respondRedirect {
-			path("/404")
-		}
-	}
-
 	val responseFile = responseFilesConfig().codes.find {
-		it.code == code && it.exists
+		it.code == route.statusCode && it.exists
 	}
-		?: ResponseFilesConfig.ResponseFile.responseNotFound(code)
+		?: ResponseFilesConfig.ResponseFile.responseNotFound(route.statusCode)
 
 	when (route.data) {
 		"raw" -> call.respond(responseFile.raw())
@@ -35,7 +26,8 @@ fun Routing.serverResponse() = get<ResponseRoute> { route ->
 			call.respondHtml {
 				head {
 					style {
-						+"""
+						unsafe {
+							+"""
                 body {
                     background-color: black;
                     color: white;
@@ -47,15 +39,16 @@ fun Routing.serverResponse() = get<ResponseRoute> { route ->
                     margin: 0;
                 }
                 """
+						}
 					}
 				}
 				body {
 					div {
 						style = "text-align: center;"
-						img("$code - ${responseFile.description}", responseFile.path)
+						img("${route.statusCode} - ${responseFile.description}", responseFile.path)
 						br { }
 						h1 {
-							+"$code"
+							+"$route.statusCode"
 						}
 						h3 {
 							+responseFile.description
