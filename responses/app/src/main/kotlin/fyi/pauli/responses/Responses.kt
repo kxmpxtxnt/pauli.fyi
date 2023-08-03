@@ -17,9 +17,9 @@ import kotlinx.serialization.json.Json
 import org.slf4j.LoggerFactory
 import org.slf4j.event.Level
 
-val SERVER_PORT: Int = System.getenv("SERVER_PORT").toInt()
-val SERVER_HOST: String = System.getenv("SERVER_HOST")
-val DEBUG: Boolean = System.getenv("DEBUG").toBoolean()
+val SERVER_PORT: Int = /*System.getenv("SERVER_PORT").toInt()*/ 3000
+val SERVER_HOST: String = /*System.getenv("SERVER_HOST") */ "0.0.0.0"
+val DEBUG: Boolean = /*System.getenv("DEBUG").toBoolean() */ true
 
 val responseFilesConfig: () -> ResponseFilesConfig
 	get() = {
