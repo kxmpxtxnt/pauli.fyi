@@ -12,14 +12,13 @@ import io.ktor.server.plugins.contentnegotiation.*
 import io.ktor.server.resources.*
 import io.ktor.server.response.*
 import io.ktor.server.routing.*
-import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.json.Json
 import org.slf4j.LoggerFactory
 import org.slf4j.event.Level
 
-val SERVER_PORT: Int = /*System.getenv("SERVER_PORT").toInt()*/ 3000
-val SERVER_HOST: String = /*System.getenv("SERVER_HOST") */ "45.82.121.238"
-val DEBUG: Boolean = /*System.getenv("DEBUG").toBoolean() */ true
+val SERVER_PORT: Int = System.getenv("SERVER_PORT").toInt()
+val SERVER_HOST: String = System.getenv("SERVER_HOST")
+val DEBUG: Boolean = System.getenv("DEBUG").toBoolean()
 
 val responseFilesConfig: () -> ResponseFilesConfig
 	get() = {
